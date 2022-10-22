@@ -1,0 +1,476 @@
+*{
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Be Vietnam Pro',sans-serif,serif;
+}
+/*MOBILE VIEWPORT*/
+/*------------------------Header----------------------*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 45px 20px 40px 20px;
+}
+header img{
+    height: 20px;
+}
+header button{
+    display: none;
+}
+nav{
+    display: none;
+}
+/*------------------------Main-----------------------*/
+#welcome-banner{
+    text-align: center;
+}
+#welcome-banner img{
+    width: 350px;
+}
+#welcome-banner div{
+    margin: 10px;
+}
+#welcome-banner div h1{
+    color: #232C50;
+    font-size: 40px;
+    font-weight: 700;
+}
+#welcome-banner div p{
+    font-size: 18px;
+    padding: 10px 20px 0 20px;
+}
+button,footer #button{
+    background-color: #F3603B;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    border-style: none;
+    color: rgb(220, 220, 220);
+    cursor: pointer;
+    justify-content: center;
+    margin-top: 30px; 
+    margin-bottom:70px;
+    padding: 15px;
+    width: 130px;
+}
+button:hover,footer #button:hover{
+    background-color: #ef8a70;
+}
+/*------------------------------Manage section*/
+h2{
+    color: #232C50;
+    font-size: 32px;
+}
+section p{
+    line-height: 30px;
+}
+section div{
+    text-align: center;
+}
+section div h2{
+    margin: 50px 20px 0 20px;
+}
+section div p{
+    padding: 15px 30px 40px 30px;
+}
+/*------------------------------List section*/
+section ol{
+    counter-reset: item;
+    list-style-type: none;
+}
+section ol li{
+    background-color: #fff0eb;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    color: #414c81;
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 10px 0 10px 0;
+}
+section ol li:before{
+    background: #F3603B;
+    border-radius: 50px;
+    color: #ececec;
+    content: counter(item, decimal-leading-zero);
+    counter-increment: item;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 10px 20px 10px 20px;
+}
+section ol p{
+    font-weight: 500;
+    padding: 12px 10px 50px 12px;
+}
+/*---------------------------Cards section*/
+.cards-container{
+    text-align: center;
+}
+.cards-container h2{
+    margin-bottom: 50px;
+}
+.cards-container div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cards-container div article{
+    background-color: #f6f1e9;
+    width: 350px;
+}
+.cards-container div article img{
+    width: 70px;
+    position: relative;
+    bottom: 30px;
+}
+.cards-container div article .name{
+    color: #232C50;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+.cards-container div article p{
+    font-size: 14px;
+    margin: 0 10px 0px 10px;
+}
+#card2, #card3{
+    display: none;
+}
+/*------------------Subscriprion section*/
+.subscription{
+    align-items: center;
+    background-color: #F3603B;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.subscription h3{
+    font-size: 40px;
+    margin: 50px 30px 50px 30px;
+}
+.subscription button{
+    background-color: rgb(226, 226, 226);
+    color: #F3603B;
+}
+.subscription button:hover{
+    background-color: #212020;
+    color: #ef8a70;
+}
+/*-----------------------Footer-------------------*/
+footer{
+    background-color: #1E1E26;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+footer section{
+    margin-top: 40px;
+}
+footer form #mail{
+    border-radius: 50px;
+    border-style: none;
+    padding: 15px 15px;
+    width: 240px;
+}
+footer #button{
+    margin: 0 0 0 5px;
+    padding: 15px;
+    width: 60px;
+}
+footer .list-container ul{
+    align-content: space-around;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 15px;
+    height: 180px;
+    list-style: none;
+    padding: 0 10px 10px 10px ;
+    text-align: left;
+}
+footer .list-container li{
+    margin: 10px;
+}
+footer .list-container li a{
+    text-decoration: none;
+    color: #d0d0d0;
+}
+footer .list-container li a:hover{
+    color: #F3603B;
+}
+footer section a i{
+    font-size: 30px;
+    margin: 10px 10px 70px 10px;
+    color: white;
+}
+footer section a:hover i{
+    color: #F3603B;
+}
+footer p{
+    color: #8C8C94;
+    font-size: 13px;
+    margin-top: 40px;
+    padding: 10px;
+}
+/*----------------------------DESKTOP VIEWPORT 768px------------------------------*/
+@media(min-width: 768px){
+    header{
+        justify-content: space-around;
+        margin: 0;
+    }
+    nav{
+        display: inherit;
+        font-size: 13px;
+    }
+    nav ul{
+        list-style: none;
+        display: flex;
+    }
+    nav ul li{
+        margin: 0 10px 0 10px;
+    }
+    nav ul li a{
+        color: #232C50;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    nav ul li a:hover{
+        color: #8C8C94;
+        cursor: pointer;
+    }
+    header button{
+        display: inherit;
+        margin-bottom: 30px;
+    }
+    #menu-hamburguesa{
+        display: none;
+    }
+}
+/*----------------------------DESKTOP VIEWPORT 1440px------------------------------*/
+@media(min-width:1440px){
+    /*-----------------------------HEADER-------------------------*/
+    header{
+        justify-content: space-evenly;
+        margin: 45px 0 40px 0;
+    }
+    nav{
+        font-size: 16px;
+    }
+    /*------------------------------MAIN--------------------------*/
+    /*-----------------------Welocome section*/
+    #welcome-banner{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 60px 0 60px 0;
+    }
+    #welcome-banner div{
+        width: 440px;
+        text-align: left;
+        font-weight: bold;
+    }
+    #welcome-banner div p{
+        padding-left: 0;
+    }
+    #welcome-banner div button{
+        margin-left: 0;
+    }
+    #welcome-banner img{
+        width: 500px;
+    }
+    /*----------------------Manage section*/
+    #manage-container{
+        align-items: flex-start;
+        display: flex;
+        justify-content: space-evenly;
+        text-align: justify;
+        margin-bottom: 60px;
+    }
+    #manage-container div{
+        text-align: left;
+        width: 450px;
+        font-weight: bold;
+    }
+    #manage-container div p{
+        padding-left: 20px;
+    }
+    #manage-container ol{
+        margin-top: 40px;
+        width: 550px;
+    }
+    #manage-container ol li{
+        background-color: white;
+    }
+    #manage-container ol p{
+        padding-left: 70px;
+        width: 540px;
+    }
+    /*----------------------Card section*/
+    #card1,#card2,#card3{
+        display: inline-block;
+        width: 390px;
+        height: 305px;
+    }
+    /*--------------------Subscription Section*/
+    .subscription{
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+    }
+    .subscription h3{
+        width: 550px;
+        margin: 40px 100px 40px 10px;
+    }
+    .subscription button{
+        margin-right: 60px;
+    }
+    /*------------------------FOOTER-----------------------*/
+    footer{
+        flex-wrap: wrap-reverse;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        padding: 10px 50px 35px 50px;
+        height: 300px;
+    }
+    footer section{
+        width: 400px;
+        height: 180px;
+    }
+    footer .social-container{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+    }
+    footer .social-container img{
+        width: 230px;
+    }
+    footer .social-container div{
+        margin-top: 5px;
+    }
+    footer .social-container div a i{
+        font-size: 30px;
+        margin: 8px;
+    }
+    footer .list-container ul{
+        margin: 0;
+    }
+    footer p{
+        position: relative;
+        left:  450px;
+        top: 200px;
+        width: 300px;
+        height: 40px;
+    }
+}
+/*----------------------------DESKTOP VIEWPORT 1600px------------------------------*/
+@media(min-width: 1600px){
+    footer section{
+        width: 30%;
+    }
+    footer p{
+        left:  600px;
+    }
+}
+
+/*----------------------------DESKTOP VIEWPORT 2560px------------------------------*/
+@media(min-width: 2560px){
+    /*------------------------------HEADER--------------------------*/
+    header img{
+        height: 40px;
+    }
+    nav ul li{
+        font-size: 30px;
+    }
+    button,footer #button{
+        font-size: 20px;
+        padding: 25px;
+        width: 180px;
+    }
+    /*------------------------------MAIN--------------------------*/
+    /*-----------------------Welocome section*/
+    #welcome-banner div{
+        width: 680px;
+    }
+    #welcome-banner div h1{
+        font-size: 80px;
+    }
+    #welcome-banner div p{
+        font-size: 25px;
+    }
+    #welcome-banner img{
+        width: 800px;
+    }
+    /*----------------------Manage section*/
+    #manage-container div{
+        width: 750px;
+    }
+    section div h2{
+        font-size: 65px;
+        padding: 0;
+    }
+    #manage-container ol{
+        font-size: 40px;
+        width: 800px;
+    }
+    #manage-container ol p{
+        padding-left: 70px;
+        font-size: 22px;
+        width: 800px;
+    }
+    /*----------------------Card section*/
+    #card1,#card2,#card3{
+        display: inline-block;
+        width: 700px;
+        height: 355px;
+    }
+    .cards-container div article img{
+        width: 100px;
+    }
+    .cards-container div article .name{
+        font-size: 25px;
+    }
+    .cards-container div article p{
+        font-size: 20px;
+        margin: 20px 10px 0px 10px;
+    }
+    /*--------------------Subscription Section*/
+    .subscription h3{
+        font-size: 55px;
+        width: 800px;
+    }
+    .subscription button{
+        margin-right: 50px;
+    }
+    /*------------------------FOOTER-----------------------*/
+    footer{
+        height: 350px;
+    }
+    footer section{
+        width: 750px;
+        height: 200px;
+    }
+    footer .social-container img{
+        width: 250px;
+    }
+    footer .social-container div a i{
+        font-size: 35px;
+    }
+    footer .list-container ul{
+        font-size: 20px;
+    }
+    footer #button{
+        margin: 0 0 0 5px;
+        padding: 15px;
+        width: 60px;
+    }
+    footer p{
+        left:  850px;
+        top: 200px;
+    }
+}
